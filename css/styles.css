@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto-regular.woff2') format('woff2'),
+         url('fonts/oswald-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto-bold.woff2') format('woff2'),
+         url('fonts/roboto-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto-italic.woff2') format('woff2'),
+         url('fonts/roboto-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto-bolditalic.woff2') format('woff2'),
+         url('fonts/roboto-bolditalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/oswald-regular.woff2') format('woff2'),
+         url('fonts/oswald-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Oswald, sans-serif;
+    background-color: #353535;
+    padding-top: 66px;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #353535;
+    border-bottom: 1px solid #353535;
+    z-index: 9999;
+    transition: top .5s;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-family: Roboto, sans serif;
+    font-weight:bold;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 120px;
+    color: #3c6e71;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+figcaption {
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    font-size: 1.7rem;
+    margin-top: 15px;
+    padding-bottom: 12px;
+    color: #d9d9d9 !important;
+}
+
+h3 {
+    text-align: center;
+    color: #d9d9d9;
+    text-transform: uppercase;
+}
+
+h4 {
+    text-align: center;
+    color: #d9d9d9;
+    font-family: Oswald, sans-serif;
+}
+
+header.hide {
+    top: -77px;
+}
+
+header nav {
+    background-color: #3c6e71;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: left .5s;
+}
+
+header nav.show {
+    left: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 4.5rem 0 0 0;
+}
+
+header nav ul li a {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid #76999b;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    background-color: #3c6e71;
+}
+
+header nav ul li:first-child a {
+    border-top: 1px solid #76999b;
+}
+
+main {
+    background-color: #d9d9d9;
+    padding: 1rem;
+}
+
+footer {
+    color: #666;
+    text-align: center;
+    padding: 1rem;
+}
+
+figure {
+    margin: 2rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 200px;
+    margin: .9rem 1rem;
+    display: block;
+}
+
+.img-main {
+    position: relative;
+    background-color: #333;
+    background-image: url('../images/terassit.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-top: 100%;
+}
+
+.img-main::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.img-main h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: 8vw;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 0;
+    transform: translateY(-50%);
+    text-shadow: 0 0 .75rem #000;
+}
+
+footer a {
+    color: #4f7c7f !important;
+    font-family: Oswald, sans-serif;
+    padding: .25rem;
+}
+
+/* .alert {
+    background-color: #ffe;
+    padding: 1rem;
+    border: 2px solid #ec2;
+    border-radius: .5rem;
+    margin: 2rem 0;
+}
+ */
+.hidden-mobile {
+    display: none;
+}
+
+#menuBtn,
+#closeMenuBtn {
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+#menuBtn {
+    background-image: url('../images/icon-menu.svg');
+    margin-right: 1rem;
+    transition: opacity .5s, transform .5s;
+}
+
+#menuBtn.hide {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+#closeMenuBtn {
+    background-image: url('../images/icon-close.svg');
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+}
+
+footer a,
+footer a:hover,
+footer a:active {
+    color: #fff;
+}
+
+@media (min-width: 320px) {
+    body {
+        padding-top: 77px;
+    }
+    .logo {
+        max-width: 240px;
+    }
+}
+
+@media (min-width: 480px) {
+    .img-main {
+        padding-top: 56.25%; /* 16:9 */
+    }
+    .img-main h1 {
+        font-size: 6vw;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 146px;
+    }
+    header {
+        border: none;
+    }
+    header.condensed {
+        top: -96px;
+    }
+    header.hide {
+        top: -146px;
+    }
+    header nav {
+        position: static;
+    }
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    header nav ul li a {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        border-bottom: none;
+        border-right: 1px solid #628989;
+    }
+    header nav ul li:first-child a {
+        border-top: none;
+        border-left: 1px solid #628989;
+    }
+    .logo {
+        max-width: 320px;
+    }
+    .hidden-desktop {
+        display: none;
+    }
+    .hidden-mobile {
+        display: block;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .col-1-3 {
+        width: 32%;
+    }
+    #menuBtn, 
+    #closeMenuBtn {
+        display: none;
+    }
+}
+
+@media (min-width: 960px) {
+    .img-main {
+        padding-top: 30%;
+    }
+    .img-main h1 {
+        font-size: 3vw;
+    }
+}
